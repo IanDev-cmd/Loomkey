@@ -1,0 +1,49 @@
+# Loomkey Blueprint.
+# Starter ($7) stays awake so Flutterwave webhooks are not dropped while the instance sleeps.
+# Free sleeps. Do not move this service to Pro unless that spend is intentional.
+# One instance only: the persistent disk cannot be shared across instances.
+
+services:
+  - type: web
+    name: loomkey
+    runtime: node
+    region: frankfurt
+    plan: starter
+    branch: main
+    numInstances: 1
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    maxShutdownDelaySeconds: 60
+    disk:
+      name: loomkey-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: NODE_ENV
+        value: production
+      # Commission and settlement. Safe to keep in the Blueprint.
+      - key: PLATFORM_FEE_PERCENT
+        value: "10"
+      - key: SETTLEMENT_CURRENCY
+        value: KES
+      - key: PLATFORM_MIN_SWEEP
+        value: "100"
+      # Fill these in the Render Dashboard when the Blueprint syncs.
+      # FLW_PUBLIC_KEY is the Flutterwave public key exposed to the browser.
+      # FLW_SECRET_KEY and FLW_SECRET_HASH stay server-side. Webhooks are rejected without the hash.
+      # PLATFORM_PAYOUT is JSON, for example:
+      # {"primary":{"type":"mpesa","phone":"0712345678","name":"Loomkey Ltd"}}
+      # APP_URL is optional. Leave it unset to use RENDER_EXTERNAL_URL.
+      # Set APP_URL only when a custom domain should be the public origin.
+      - key: FLW_PUBLIC_KEY
+        sync: false
+      - key: FLW_SECRET_KEY
+        sync: false
+      - key: FLW_SECRET_HASH
+        sync: false
+      - key: PLATFORM_PAYOUT
+        sync: false

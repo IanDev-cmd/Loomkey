@@ -1,0 +1,14 @@
+{
+  "name": "loomkey",
+  "private": true,
+  "description": "Loomkey console, nomenclature, and Flutterwave billing",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "selfsigned": "^5.5.0",
+    "web-push": "^3.6.7"
+  }
+}
