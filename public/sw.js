@@ -1,12 +1,12 @@
-const CACHE = "loomkey-shell-v1";
+const CACHE = "loomkey-shell-v2";
 const SHELL = [
   "/listings",
   "/billing",
   "/dashboard",
   "/install",
-  "/css/console.css",
   "/js/pwa.js",
-  "/js/nav.js",
+  "/js/session.js",
+  "/js/loomkey-flutterwave.js",
   "/manifest.webmanifest",
   "/img/bg.jpg",
   "/icons/icon-192.png",

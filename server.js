@@ -35,12 +35,12 @@ app.use((req, res, next) => {
   if (req.path === "/sw.js" || req.path === "/manifest.webmanifest") res.set("Cache-Control", "no-cache");
   next();
 });
-app.get("/install", (_req, res) => res.sendFile(path.join(publicDir, "install.html")));
+app.get("/install", (_req, res) => res.sendFile(path.join(publicDir, "index.html")));
 app.use("/api/push", push.router);
 app.use("/api/pwa", push.links);
 mountApi(app);
 app.use("/api", payments);
-app.use(express.static(publicDir));
+app.use(express.static(publicDir, { index: false }));
 mountPages(app);
 
 app.use((req, res) => {

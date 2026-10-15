@@ -136,7 +136,7 @@ links.get("/qr.svg", async (req, res) => {
     type: "svg",
     margin: 1,
     width: 220,
-    color: { dark: "#1d1d36", light: "#f7f3ea" },
+    color: { dark: "#064e32", light: "#ffffff" },
   });
   res.type("image/svg+xml").send(svg);
 });

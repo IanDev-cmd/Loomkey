@@ -91,7 +91,7 @@
   }
 
   function paintQr(img, path) {
-    img.src = "/api/qr.svg?path=" + encodeURIComponent(path);
+    img.src = "/api/pwa/qr.svg?path=" + encodeURIComponent(path);
     img.alt = path === "/install" ? "QR code that opens Loomkey so Chrome can install it" : "QR code for booking payment";
   }
 
