@@ -13,7 +13,7 @@
   body {
     font-family: Montserrat, "Segoe UI", sans-serif;
     color: #fff;
-    background: #102028 url("/landing/hero.jpg") center / cover no-repeat fixed;
+    background: #102018 url("/photos/villa-hill.jpg") center / cover no-repeat fixed;
   }
   button, a, input { font-family: inherit; }
   button { cursor: pointer; }
@@ -32,7 +32,7 @@
     min-height: 520px;
     border-radius: 28px;
     overflow: hidden;
-    background: #07161e url("/landing/hero.jpg") center / cover no-repeat;
+    background: #07161e url("/photos/villa-hill.jpg") center / cover no-repeat;
     box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
   }
   .shade {
@@ -293,7 +293,7 @@
       <div class="rail" id="rail" aria-label="Slides"></div>
 
       <div class="copy">
-        <h1 id="title">ACONCAGUA</h1>
+        <h1 id="title">HILLSIDE</h1>
         <p id="blurb"></p>
         <a class="enter" id="enter" href="/listings">Enter</a>
       </div>
@@ -320,30 +320,40 @@
 <script>
 const slides = [
   {
-    title: "ACONCAGUA",
-    image: "/landing/hero.jpg",
-    text: "Aconcagua (Spanish pronunciation: [akoŋˈkaɣwa]) is a mountain in the Principal Cordillera of the Andes mountain range, in Mendoza Province, Argentina. It is the highest mountain in the Americas."
+    title: "HILLSIDE",
+    image: "/photos/villa-hill.jpg",
+    text: "A white hillside villa under the palms. Room 1312 at Richmond Place, with a locked door, access code 3482, and Lena Hoffmann booked for three guests."
   },
   {
-    title: "RIDGE STAY",
-    image: "/landing/ridge.jpg",
-    text: "An Airbnb stay on the ridge above the clouds. Room 1312 at Richmond Place, with a locked door, access code 3482, and Lena Hoffmann booked for three guests."
+    title: "CANYON",
+    image: "/photos/villa-canyon.jpg",
+    text: "A beige canyon house beside the falls. Room 6 at Fremont Street sleeps Ethan Stone and six others, with the cleaner code held for Jane Wanjiru."
   },
   {
-    title: "VALLEY HOUSE",
-    image: "/landing/valley.jpg",
-    text: "A green-valley Airbnb at 6 Fremont Street. Room 6 sleeps Ethan Stone and six others, with the cleaner code held for Jane Wanjiru."
+    title: "COURTYARD",
+    image: "/photos/villa-charcoal.jpg",
+    text: "A charcoal courtyard house with a glass balcony. Room 84 on Vista Street is Marcus Webb's stay, paid in KES through Loomkey with a 10% platform commission."
   },
   {
-    title: "PEAK CABIN",
-    image: "/landing/peak.jpg",
-    text: "A peak-side Airbnb at 84 Vista Street. Room 84 is Marcus Webb's stay, paid in KES through Loomkey with a 10% platform commission."
+    title: "TERRACE",
+    image: "/photos/villa-lawn.jpg",
+    text: "A dark modern terrace above a green lawn. Room 12 on Harbor Lane in Mombasa is vacant, with owner and cleaner codes ready for the next stay."
+  },
+  {
+    title: "STREAM",
+    image: "/photos/villa-stream.jpg",
+    text: "A warm stone house beside a canyon stream. Loomkey holds the stay, the door codes, and the KES balance for the owner."
+  },
+  {
+    title: "GLASS",
+    image: "/photos/villa-glass.jpg",
+    text: "A glass hillside villa over a reflecting pool. Check-in, bookings, and staff pay all open from the same floating desk."
   }
 ];
 const popular = [
-  { src: "/landing/ridge.jpg", alt: "Airbnb photo of a ridge stay", slide: 1 },
-  { src: "/landing/valley.jpg", alt: "Airbnb photo of a valley house", slide: 2 },
-  { src: "/landing/peak.jpg", alt: "Airbnb photo of a peak cabin", slide: 3 }
+  { src: "/photos/villa-canyon.jpg", alt: "Beige canyon house with waterfalls", slide: 1 },
+  { src: "/photos/villa-charcoal.jpg", alt: "Charcoal modern house with a lawn", slide: 2 },
+  { src: "/photos/villa-lawn.jpg", alt: "Dark modern house above a green lawn", slide: 3 }
 ];
 let index = 0;
 

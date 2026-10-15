@@ -37,7 +37,7 @@
   body {
     font-family: Montserrat, "Segoe UI", sans-serif;
     color: var(--ink);
-    background: linear-gradient(155deg, #f3fff8 0%, #b8f6d6 32%, #3ee58a 68%, #00c45c 100%);
+    background: #102018 url("/photos/villa-terrace.jpg") center / cover no-repeat fixed;
   }
   button, input { font-family: inherit; }
   button { cursor: pointer; }
@@ -64,6 +64,7 @@
     background: var(--panel);
     border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 28px 70px rgba(0, 0, 0, 0.32);
     container-type: inline-size;
   }
 
@@ -357,6 +358,7 @@
     font-weight: 700;
     font-size: 15px;
     letter-spacing: 0.01em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   }
   .footer button {
     background: none;
@@ -426,12 +428,12 @@
   .stage[hidden] { display: none !important; }
   #context { display: none !important; }
   #workspace[hidden] { display: none !important; }
-  body.in-app { background: #00d96e; overflow: hidden; }
+  body.in-app { background: #102018 url("/photos/villa-canyon.jpg") center / cover no-repeat fixed; overflow: hidden; }
 
   .dk {
     min-height: 100vh;
     height: 100vh;
-    background: #00d96e;
+    background: transparent;
     padding: 56px 48px 28px;
     position: relative;
     overflow: hidden;
@@ -439,11 +441,7 @@
     color: #191c23;
     box-sizing: border-box;
   }
-  .dk-tri {
-    position: absolute;
-    pointer-events: none;
-    background: #00c45c;
-  }
+  .dk-tri { display: none; }
   .dk-tri-a {
     top: 0;
     left: 42%;
@@ -466,7 +464,7 @@
     border-radius: 16px;
     display: flex;
     overflow: hidden;
-    box-shadow: 0 16px 40px rgba(0, 40, 16, 0.08);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
   }
   .dk-rail {
     width: 72px;
@@ -885,19 +883,19 @@
     position: fixed;
     inset: 0;
     z-index: 25;
-    background: linear-gradient(155deg, #f3fff8 0%, #d9ffe9 55%, #7eebad 100%);
+    background: #102018 url("/photos/villa-charcoal.jpg") center / cover no-repeat fixed;
     overflow: auto;
     font-family: Poppins, Montserrat, sans-serif;
     color: #1b2024;
   }
   .docs[hidden] { display: none !important; }
   .docs-wrap { width: min(640px, calc(100% - 48px)); margin: 42px auto 88px; text-align: center; }
-  .docs-wrap h2 { margin: 0; font: 700 22px/1.3 Poppins, sans-serif; color: #1b2024; }
-  .docs-wrap > p { margin: 6px 0 22px; color: #8b919c; font: 400 14px/1.45 Poppins, sans-serif; }
+  .docs-wrap h2 { margin: 0; font: 700 22px/1.3 Poppins, sans-serif; color: #fff; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45); }
+  .docs-wrap > p { margin: 6px 0 22px; color: rgba(255,255,255,.92); font: 400 14px/1.45 Poppins, sans-serif; text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4); }
   .docs-card {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(20, 28, 45, 0.06);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
     margin: 0 0 12px;
     text-align: left;
   }
@@ -1011,14 +1009,14 @@
   }
   #prescreen[hidden] { display: none !important; }
   #vetting[hidden] { display: none !important; }
-  body.in-screen { background: linear-gradient(155deg, #f3fff8 0%, #b8f6d6 40%, #00d96e 100%); overflow: auto; }
-  body.in-vetting { background: linear-gradient(160deg, #c0d7f6 0%, #b4def6 40%, #aee2f7 100%); overflow: hidden; }
+  body.in-screen { background: #102018 url("/photos/villa-pool.jpg") center / cover no-repeat fixed; overflow: auto; }
+  body.in-vetting { background: #102018 url("/photos/villa-glass.jpg") center / cover no-repeat fixed; overflow: hidden; }
   #menuHome[hidden] { display: none !important; }
-  body.in-menu { background: linear-gradient(155deg, #f3fff8 0%, #d9ffe9 45%, #7eebad 100%); overflow: auto; }
+  body.in-menu { background: #102018 url("/photos/villa-hill.jpg") center / cover no-repeat fixed; overflow: auto; }
 
   .mh {
     min-height: 100vh;
-    background: #f4fbf7;
+    background: transparent;
     font-family: Poppins, Montserrat, sans-serif;
     color: #2c2c2c;
   }
@@ -1026,9 +1024,7 @@
     position: relative;
     min-height: 320px;
     padding: 26px 48px 78px;
-    background:
-      radial-gradient(90% 80% at 78% 0%, rgba(255,255,255,.22), transparent 52%),
-      linear-gradient(102deg, #d9ffe9 0%, #7eebad 28%, #1ed86a 68%, #00b85c 100%);
+    background: linear-gradient(180deg, rgba(6, 18, 12, 0.42) 0%, rgba(6, 18, 12, 0.12) 62%, rgba(6, 18, 12, 0.28) 100%);
     color: #fff;
   }
   .mh-bar {
@@ -1184,7 +1180,8 @@
     cursor: pointer;
     font-family: Poppins, sans-serif;
   }
-  .mh-card:hover { box-shadow: 0 8px 22px rgba(20, 40, 60, .06); }
+  .mh-card { box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22); }
+  .mh-card:hover { box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28); }
   .mh-card svg {
     width: 64px;
     height: 64px;
@@ -1225,16 +1222,17 @@
     left: 18px;
     border: 0;
     background: transparent;
-    color: #8d8d93;
+    color: #fff;
     font: 600 12px Poppins, sans-serif;
     cursor: pointer;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   }
   .vt-shell {
     width: min(1180px, 96vw);
     height: min(740px, calc(100vh - 64px));
     background: #fff;
     border-radius: 18px;
-    box-shadow: 0 22px 50px rgba(0, 0, 0, .12);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.28);
     display: grid;
     grid-template-columns: 18.3% 26% 1fr;
     overflow: hidden;
@@ -1550,11 +1548,7 @@
   .vt-send.blocked { opacity: .55; }
 
   body.in-vetting {
-    background:
-      radial-gradient(520px 340px at 78% 12%, rgba(198, 211, 245, .95), transparent 70%),
-      radial-gradient(460px 320px at 12% 88%, rgba(174, 226, 247, .95), transparent 72%),
-      radial-gradient(380px 260px at 70% 78%, rgba(175, 226, 247, .55), transparent 70%),
-      linear-gradient(118deg, #c0d7f6 0%, #b7dcf6 22%, #aee2f7 48%, #c5d4f5 100%);
+    background: #102018 url("/photos/villa-glass.jpg") center / cover no-repeat fixed;
   }
   .vt {
     min-height: 100vh;
@@ -1873,9 +1867,10 @@
     left: 28px;
     border: 0;
     background: transparent;
-    color: #067a3a;
+    color: #fff;
     font: 600 13px Poppins, sans-serif;
     letter-spacing: 0.04em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   }
   .ps-wrap {
     position: relative;
@@ -1886,7 +1881,7 @@
     margin-left: 118px;
     background: #fff;
     min-height: 520px;
-    box-shadow: 0 18px 40px rgba(6, 122, 58, 0.1);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
     display: flex;
     justify-content: flex-end;
     padding: 54px 56px 42px 48px;
@@ -2014,7 +2009,7 @@
   .ps-modal {
     position: fixed;
     inset: 0;
-    background: rgba(184, 246, 214, 0.72);
+    background: rgba(8, 18, 14, 0.46);
     display: grid;
     place-items: center;
     z-index: 30;
